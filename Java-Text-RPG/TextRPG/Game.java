@@ -8,7 +8,7 @@ import java.util.Scanner;
  */
 public class Game
 {
-    public static void main (String[] args)
+    public static void main(String[] args)
     {
         System.out.println("~~~~~ Welcome to the amazing text-based RPG game! ~~~~~");
         System.out.println();
@@ -23,18 +23,16 @@ public class Game
         // String name = keyboard.nextLine();
         
         System.out.println("What class is your character? Pick one of three:\n"+
-                           "Warrior, Thief, Mage");
+                           "[1]Warrior [2]Thief [3]Mage");
         
-        String playerClass = keyboard.nextLine();
+        int playerClass = keyboard.nextInt();
         
-        if (!playerClass.equals("Warrior") &&
-            !playerClass.equals("Thief") &&
-            !playerClass.equals("Mage"))
+        if (playerClass == 1)
         {
-            System.out.println("Please enter a valid character class.");
-        }else
-        {
-            System.out.println("Your character is a " + playerClass);
+            System.out.print("success");
+            //player.setPlayerClass("Warrior");
+        }else{
+            System.out.println("Please enter a valid numerical input.");
         }
         
         
